@@ -436,6 +436,37 @@
     line-height: 1.7;
   }
 
+  /* ---------- GRADE 2x2 (posicionamento / planos / diferenciais) ---------- */
+  .grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-top: 1px solid var(--line);
+  }
+  .grid-2 .cell {
+    padding: 30px 28px 30px 28px;
+    border-left: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .grid-2 .cell:nth-child(odd) { border-left: none; padding-left: 0; }
+  .grid-2 .cell:nth-child(3), .grid-2 .cell:nth-child(4) { border-bottom: none; }
+  @media (max-width: 700px) {
+    .grid-2 { grid-template-columns: 1fr; }
+    .grid-2 .cell { border-left: none !important; padding-left: 0 !important; border-bottom: 1px solid var(--line); }
+    .grid-2 .cell:last-child { border-bottom: none; }
+  }
+
+  .check-icon {
+    width: 26px; height: 26px;
+    border-radius: 50%;
+    border: 1px solid var(--green-dim);
+    color: var(--green);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+  .check-icon svg { width: 13px; height: 13px; }
+
   /* ---------- ONDE ESTAMOS ---------- */
   .location-card {
     border: 1px solid var(--line);
@@ -661,6 +692,7 @@
     <nav class="nav-links">
       <a href="#sobre">Sobre</a>
       <a href="#como-funciona">Como funciona</a>
+      <a href="#diferenciais">Diferenciais</a>
       <a href="#onde-estamos">Onde estamos</a>
       <a href="#anuncie">Anuncie</a>
     </nav>
@@ -672,6 +704,7 @@
   <nav class="nav-mobile-panel" id="navMobilePanel">
     <a href="#sobre">Sobre</a>
     <a href="#como-funciona">Como funciona</a>
+    <a href="#diferenciais">Diferenciais</a>
     <a href="#onde-estamos">Onde estamos</a>
     <a href="#anuncie">Anuncie</a>
   </nav>
@@ -689,7 +722,7 @@
         </div>
 
         <h1 class="hero-title">Sua marca em luz, vista por milhares todos os dias.</h1>
-        <p class="hero-sub">A BrightX opera um painel de LED fixo em ponto de alto fluxo. Sua publicidade acesa 24 horas por dia, sempre no caminho do seu público.</p>
+        <p class="hero-sub">Painel de LED fixo em ponto de alto fluxo, sempre visível pra quem mais importa: seu futuro cliente.</p>
 
         <div class="hero-actions">
           <a href="#anuncie" class="btn btn-primary">Anuncie conosco</a>
@@ -717,6 +750,37 @@
     </div>
   </section>
 
+  <!-- POSICIONAMENTO -->
+  <section id="posicionamento">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="section-title">Uma mídia que soma, não compete</h2>
+      </div>
+      <div class="grid-2">
+        <div class="cell">
+          <div class="step-num">01</div>
+          <div class="step-title">O digital já é seu. Agora vá pra rua.</div>
+          <div class="step-desc">Sua marca já pode estar rodando campanhas digitais, inclusive de tráfego pago.</div>
+        </div>
+        <div class="cell">
+          <div class="step-num">02</div>
+          <div class="step-title">Alcance que o algoritmo não entrega</div>
+          <div class="step-desc">O painel de LED chega em quem está na rua, fora do alcance de qualquer campanha digital.</div>
+        </div>
+        <div class="cell">
+          <div class="step-num">03</div>
+          <div class="step-title">Sua marca gravada na mente do cliente</div>
+          <div class="step-desc">Aumenta o recall da marca quando somado a uma estratégia digital já existente.</div>
+        </div>
+        <div class="cell">
+          <div class="step-num">04</div>
+          <div class="step-title">Multiplique o resultado da sua comunicação</div>
+          <div class="step-desc">Ideal pra quem quer somar um canal físico de alta visibilidade à comunicação que já faz.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- SOBRE -->
   <section id="sobre">
     <div class="wrap about-grid">
@@ -724,9 +788,9 @@
         <h2 class="section-title">Visibilidade que não para, o dia inteiro.</h2>
         <p class="section-desc">
           A BrightX comercializa espaço publicitário num painel de LED fixo, instalado
-          num ponto de grande movimento. Sua marca fica exposta em alta definição,
-          de dia e de noite, pro público que passa por ali todos os dias, sem depender
-          de horário, clima ou distração de tela de celular.
+          num ponto de grande movimento. Alta definição, visível de dia e de noite,
+          ativo 24 horas por dia sem depender de clima ou horário — sua marca sempre
+          visível pra quem mais importa: seu futuro cliente.
         </p>
         <div class="data-strip">
           <div>
@@ -764,17 +828,48 @@
         <div class="step">
           <div class="step-num">01</div>
           <div class="step-title">Escolha o plano ideal</div>
-          <div class="step-desc">Defina o tempo de exibição que faz sentido pro seu anúncio: por dia, semana ou em pacote mensal.</div>
+          <div class="step-desc">Defina a frequência de exibição que faz sentido pro seu anúncio e pro seu orçamento.</div>
         </div>
         <div class="step">
           <div class="step-num">02</div>
           <div class="step-title">Envie sua arte</div>
-          <div class="step-desc">Manda a arte pronta do seu anúncio, no formato indicado pra o painel. A gente coloca ela pra rodar certinho, sem complicação.</div>
+          <div class="step-desc">Envie sua arte pronta pro anúncio ou indicamos uma agência parceira.</div>
         </div>
         <div class="step">
           <div class="step-num">03</div>
           <div class="step-title">Entra no ar</div>
-          <div class="step-desc">Sua marca entra na programação do painel, alternando com os demais anunciantes ao longo do dia.</div>
+          <div class="step-desc">E pronto — seus clientes já estão te vendo.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFERENCIAIS -->
+  <section id="diferenciais">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="section-title">Por que anunciar com a BrightX</h2>
+      </div>
+      <div class="grid-2">
+        <div class="cell">
+          <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></div>
+          <div class="step-title">Reforça sua estratégia</div>
+          <div class="step-desc">Presença física que soma a qualquer estratégia de marketing já existente.</div>
+        </div>
+        <div class="cell">
+          <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></div>
+          <div class="step-title">Milhares de olhares, todos os dias</div>
+          <div class="step-desc">Seu anúncio impacta quem passa pelo ponto de alto fluxo, todos os dias, gerando reconhecimento que vira venda.</div>
+        </div>
+        <div class="cell">
+          <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></div>
+          <div class="step-title">Visibilidade que vira caixa</div>
+          <div class="step-desc">Marca vista é marca lembrada, e marca lembrada é venda garantida. Seu painel trabalha por você 24 horas por dia.</div>
+        </div>
+        <div class="cell">
+          <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></div>
+          <div class="step-title">Saia na frente, sem complicação</div>
+          <div class="step-desc">Do primeiro contato ao painel aceso em poucos dias, com nossa equipe cuidando de cada detalhe pra você.</div>
         </div>
       </div>
     </div>
@@ -830,6 +925,10 @@
             <a class="v" href="mailto:atendimento@gudserv.com.br">atendimento@gudserv.com.br</a>
           </div>
           <div class="contact-point">
+            <span class="k">Instagram</span>
+            <a class="v" href="https://instagram.com/brightxled" target="_blank" rel="noopener">@brightxled</a>
+          </div>
+          <div class="contact-point">
             <span class="k">Resposta rápida</span>
             <p class="v">Retornamos com os detalhes em até 1 dia útil.</p>
           </div>
@@ -877,6 +976,7 @@
     <div class="footer-links">
       <a href="#sobre">Sobre</a>
       <a href="#como-funciona">Como funciona</a>
+      <a href="#diferenciais">Diferenciais</a>
       <a href="#anuncie">Anuncie</a>
     </div>
     <div class="footer-meta">© 2026 BrightX. Todos os direitos reservados.</div>
